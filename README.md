@@ -100,7 +100,7 @@ The Gradio interface exposes the agent’s workflow through visible panels:
 This makes the memory system inspectable rather than hidden.
 ## Live Demo
 
-[Hugging Face Space](https://huggingface.co/spaces/FlyingNunchucks/03-memory-augmented-agent)
+[Hugging Face Space | Your Own HF Login may be required](https://huggingface.co/spaces/FlyingNunchucks/03-memory-augmented-agent)
 
 ## Example Queries
 
