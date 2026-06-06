@@ -1,3 +1,15 @@
+---
+title: 03 Memory Augmented Agent
+emoji: 🧠
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+sdk_version: "5.0.0"
+python_version: "3.10"
+app_file: app.py
+pinned: false
+---
+
 # 03. Memory-Augmented Agent — Personal Project Memory Assistant
 
 ## Goal
