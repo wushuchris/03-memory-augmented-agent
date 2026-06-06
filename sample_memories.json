@@ -1,0 +1,163 @@
+[
+  {
+    "memory_id": "mem_001",
+    "memory_type": "semantic",
+    "content": "The user is building a portfolio project called 30 Agents for AI Engineers.",
+    "tags": [
+      "portfolio",
+      "30_agents",
+      "project"
+    ],
+    "importance": 5,
+    "created_at": "2026-05-25",
+    "source": "project_context"
+  },
+  {
+    "memory_id": "mem_002",
+    "memory_type": "episodic",
+    "content": "Agent 1 was an Autonomous Decision-Making Agent using the pattern: Rules decide. The LLM explains. Guardrails review.",
+    "tags": [
+      "agent_1",
+      "decision_agent",
+      "guardrails"
+    ],
+    "importance": 5,
+    "created_at": "2026-05-25",
+    "source": "project_context"
+  },
+  {
+    "memory_id": "mem_003",
+    "memory_type": "episodic",
+    "content": "Agent 2 was a Planning Agent for search and rescue mission planning, focused on phases, assumptions, dependencies, risks, checkpoints, and next actions.",
+    "tags": [
+      "agent_2",
+      "planning_agent",
+      "search_and_rescue"
+    ],
+    "importance": 5,
+    "created_at": "2026-05-25",
+    "source": "project_context"
+  },
+  {
+    "memory_id": "mem_004",
+    "memory_type": "semantic",
+    "content": "The user prefers GitHub-ready agent projects with a clear goal, approach, outcome, tech stack, and focus areas.",
+    "tags": [
+      "github",
+      "readme",
+      "portfolio_format"
+    ],
+    "importance": 5,
+    "created_at": "2026-05-25",
+    "source": "project_context"
+  },
+  {
+    "memory_id": "mem_005",
+    "memory_type": "semantic",
+    "content": "Agent 3 should demonstrate persistent memory, context recall, semantic memory, episodic memory, context compression, and retrieval policy.",
+    "tags": [
+      "agent_3",
+      "memory",
+      "retrieval"
+    ],
+    "importance": 5,
+    "created_at": "2026-06-06",
+    "source": "project_plan"
+  },
+  {
+    "memory_id": "mem_006",
+    "memory_type": "episodic",
+    "content": "The user asked: 'Remember that Agent 3 should use a visible audit log in the demo.'. The agent responded with guidance related to the memory-augmented agent project.",
+    "tags": [
+      "session_memory",
+      "agent_generated"
+    ],
+    "importance": 4,
+    "created_at": "2026-06-06",
+    "source": "agent_write_policy"
+  },
+  {
+    "memory_id": "mem_007",
+    "memory_type": "episodic",
+    "content": "The user asked: 'Remember that the Agent 3 README should emphasize persistent context and recall.'. The agent responded with guidance related to the memory-augmented agent project.",
+    "tags": [
+      "session_memory",
+      "agent_generated"
+    ],
+    "importance": 4,
+    "created_at": "2026-06-06",
+    "source": "agent_write_policy"
+  },
+  {
+    "memory_id": "mem_008",
+    "memory_type": "episodic",
+    "content": "The user asked: 'How should we position Agent 3 compared to Agents 1 and 2?'. The agent responded with guidance related to the memory-augmented agent project.",
+    "tags": [
+      "session_memory",
+      "agent_generated"
+    ],
+    "importance": 4,
+    "created_at": "2026-06-06",
+    "source": "agent_write_policy"
+  },
+  {
+    "memory_id": "mem_009",
+    "memory_type": "episodic",
+    "content": "The user asked: 'How should we describe Agent 3 in the README?'. The agent responded with guidance related to the memory-augmented agent project.",
+    "tags": [
+      "session_memory",
+      "agent_generated"
+    ],
+    "importance": 4,
+    "created_at": "2026-06-06",
+    "source": "agent_write_policy"
+  },
+  {
+    "memory_id": "mem_010",
+    "memory_type": "episodic",
+    "content": "The user asked: 'What did we decide about the audit log?'. The agent responded with guidance related to the memory-augmented agent project.",
+    "tags": [
+      "session_memory",
+      "agent_generated"
+    ],
+    "importance": 4,
+    "created_at": "2026-06-06",
+    "source": "agent_write_policy"
+  },
+  {
+    "memory_id": "mem_011",
+    "memory_type": "episodic",
+    "content": "The user asked: 'Remember that Agent 3 should be positioned as a continuity system.'. The agent responded with guidance related to the memory-augmented agent project.",
+    "tags": [
+      "session_memory",
+      "agent_generated"
+    ],
+    "importance": 4,
+    "created_at": "2026-06-06",
+    "source": "agent_write_policy"
+  },
+  {
+    "memory_id": "mem_012",
+    "memory_type": "episodic",
+    "content": "The user asked: 'How is Agent 3 different from Agent 1 and Agent 2?'. The agent responded with guidance related to the memory-augmented agent project.",
+    "tags": [
+      "session_memory",
+      "agent_generated"
+    ],
+    "importance": 4,
+    "created_at": "2026-06-06",
+    "source": "agent_write_policy"
+  },
+  {
+    "memory_id": "mem_013",
+    "memory_type": "episodic",
+    "content": "The user asked: 'What did I say Agent 3 should be positioned as?'. The agent responded with guidance related to the memory-augmented agent project.",
+    "tags": [
+      "session_memory",
+      "agent_generated"
+    ],
+    "importance": 4,
+    "created_at": "2026-06-06",
+    "source": "agent_write_policy"
+  }
+]

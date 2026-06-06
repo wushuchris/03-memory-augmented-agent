@@ -1,0 +1,46 @@
+timestamp,query,retrieved_memory_ids,compressed_context,write_decision,write_reason
+2026-06-06T19:04:11.914116,How should we describe Agent 3 in the README?,"['mem_005', 'mem_003', 'mem_002', 'mem_001']","Stable project context:
+- Agent 3 should demonstrate persistent memory, context recall, semantic memory, episodic memory, context compression, and retrieval policy.
+- The user is building a portfolio project called 30 Agents for AI Engineers.
+Relevant prior events:
+- Agent 2 was a Planning Agent for search and rescue mission planning, focused on phases, assumptions, dependencies, risks, checkpoints, and next actions.
+- Agent 1 was an Autonomous Decision-Making Agent using the pattern: Rules decide. The LLM explains. Guardrails review.",True,The query appears related to an important project decision or preference.
+2026-06-06T19:06:27.084357,Remember that the Agent 3 README should emphasize persistent context and recall.,"['mem_005', 'mem_006', 'mem_003', 'mem_002']","Stable project context:
+- Agent 3 should demonstrate persistent memory, context recall, semantic memory, episodic memory, context compression, and retrieval policy.
+Relevant prior events:
+- The user asked: 'Remember that Agent 3 should use a visible audit log in the demo.'. The agent responded with guidance related to the memory-augmented agent project.
+- Agent 2 was a Planning Agent for search and rescue mission planning, focused on phases, assumptions, dependencies, risks, checkpoints, and next actions.
+- Agent 1 was an Autonomous Decision-Making Agent using the pattern: Rules decide. The LLM explains. Guardrails review.",True,The query appears related to an important project decision or preference.
+2026-06-06T19:06:56.547780,How should we position Agent 3 compared to Agents 1 and 2?,"['mem_003', 'mem_002', 'mem_005', 'mem_001']","Stable project context:
+- Agent 3 should demonstrate persistent memory, context recall, semantic memory, episodic memory, context compression, and retrieval policy.
+- The user is building a portfolio project called 30 Agents for AI Engineers.
+Relevant prior events:
+- Agent 2 was a Planning Agent for search and rescue mission planning, focused on phases, assumptions, dependencies, risks, checkpoints, and next actions.
+- Agent 1 was an Autonomous Decision-Making Agent using the pattern: Rules decide. The LLM explains. Guardrails review.",True,The query appears related to an important project decision or preference.
+2026-06-06T19:10:14.747212,How should we describe Agent 3 in the README?,"['mem_007', 'mem_008', 'mem_005', 'mem_003']","Stable project context:
+- Agent 3 should demonstrate persistent memory, context recall, semantic memory, episodic memory, context compression, and retrieval policy.
+Relevant prior events:
+- The user asked: 'Remember that the Agent 3 README should emphasize persistent context and recall.'. The agent responded with guidance related to the memory-augmented agent project.
+- The user asked: 'How should we position Agent 3 compared to Agents 1 and 2?'. The agent responded with guidance related to the memory-augmented agent project.
+- Agent 2 was a Planning Agent for search and rescue mission planning, focused on phases, assumptions, dependencies, risks, checkpoints, and next actions.",True,The query appears related to an important project decision or preference.
+2026-06-06T19:10:54.770201,What did we decide about the audit log?,"['mem_006', 'mem_002', 'mem_009', 'mem_007']","Relevant prior events:
+- The user asked: 'Remember that Agent 3 should use a visible audit log in the demo.'. The agent responded with guidance related to the memory-augmented agent project.
+- Agent 1 was an Autonomous Decision-Making Agent using the pattern: Rules decide. The LLM explains. Guardrails review.
+- The user asked: 'How should we describe Agent 3 in the README?'. The agent responded with guidance related to the memory-augmented agent project.
+- The user asked: 'Remember that the Agent 3 README should emphasize persistent context and recall.'. The agent responded with guidance related to the memory-augmented agent project.",True,The query appears related to an important project decision or preference.
+2026-06-06T19:11:31.927684,Remember that Agent 3 should be positioned as a continuity system.,"['mem_008', 'mem_003', 'mem_009', 'mem_005']","Stable project context:
+- Agent 3 should demonstrate persistent memory, context recall, semantic memory, episodic memory, context compression, and retrieval policy.
+Relevant prior events:
+- The user asked: 'How should we position Agent 3 compared to Agents 1 and 2?'. The agent responded with guidance related to the memory-augmented agent project.
+- Agent 2 was a Planning Agent for search and rescue mission planning, focused on phases, assumptions, dependencies, risks, checkpoints, and next actions.
+- The user asked: 'How should we describe Agent 3 in the README?'. The agent responded with guidance related to the memory-augmented agent project.",True,The query appears related to an important project decision or preference.
+2026-06-06T19:12:10.649723,How is Agent 3 different from Agent 1 and Agent 2?,"['mem_008', 'mem_003', 'mem_002', 'mem_009']","Relevant prior events:
+- The user asked: 'How should we position Agent 3 compared to Agents 1 and 2?'. The agent responded with guidance related to the memory-augmented agent project.
+- Agent 2 was a Planning Agent for search and rescue mission planning, focused on phases, assumptions, dependencies, risks, checkpoints, and next actions.
+- Agent 1 was an Autonomous Decision-Making Agent using the pattern: Rules decide. The LLM explains. Guardrails review.
+- The user asked: 'How should we describe Agent 3 in the README?'. The agent responded with guidance related to the memory-augmented agent project.",True,The query appears related to an important project decision or preference.
+2026-06-06T19:12:42.151912,What did I say Agent 3 should be positioned as?,"['mem_008', 'mem_011', 'mem_009', 'mem_012']","Relevant prior events:
+- The user asked: 'How should we position Agent 3 compared to Agents 1 and 2?'. The agent responded with guidance related to the memory-augmented agent project.
+- The user asked: 'Remember that Agent 3 should be positioned as a continuity system.'. The agent responded with guidance related to the memory-augmented agent project.
+- The user asked: 'How should we describe Agent 3 in the README?'. The agent responded with guidance related to the memory-augmented agent project.
+- The user asked: 'How is Agent 3 different from Agent 1 and Agent 2?'. The agent responded with guidance related to the memory-augmented agent project.",True,The query appears related to an important project decision or preference.

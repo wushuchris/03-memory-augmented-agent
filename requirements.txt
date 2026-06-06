@@ -1,0 +1,5 @@
+gradio
+pandas
+pydantic
+sentence-transformers
+scikit-learn
