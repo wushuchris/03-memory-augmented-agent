@@ -98,6 +98,9 @@ The Gradio interface exposes the agent’s workflow through visible panels:
 - Audit Log
 
 This makes the memory system inspectable rather than hidden.
+## Live Demo
+
+[Hugging Face Space](https://huggingface.co/spaces/FlyingNunchucks/03-memory-augmented-agent)
 
 ## Example Queries
 
