@@ -173,24 +173,34 @@ with gr.Blocks(
     gr.HTML(HERO_HTML)
     gr.HTML(CONCEPT_HTML)
 
-    gr.Markdown("## Try the continuity system")
+    gr.Markdown("## Try the continuity system", elem_classes=["section-title"])
     query_input = gr.Textbox(
         label="Project-memory request",
         value="What did we decide about the enterprise pilot prerequisites?",
         lines=3,
+        elem_id="memory-query",
+        elem_classes=["memory-input"],
     )
 
-    with gr.Row():
-        top_k_input = gr.Slider(1, 6, value=4, step=1, label="Memories to retrieve")
+    with gr.Row(elem_classes=["control-row"]):
+        top_k_input = gr.Slider(
+            1,
+            6,
+            value=4,
+            step=1,
+            label="Memories to retrieve",
+            elem_id="memory-top-k",
+        )
         save_memory_input = gr.Checkbox(
             label="Allow policy-approved session memory writes",
             value=True,
+            elem_id="memory-write-permission",
         )
 
-    with gr.Row():
-        recall_example = gr.Button("Recall a prior decision")
-        save_example = gr.Button("Try a safe memory write")
-        block_example = gr.Button("Try the safety boundary")
+    with gr.Row(elem_classes=["example-actions"]):
+        recall_example = gr.Button("Recall a prior decision", elem_classes=["example-button"])
+        save_example = gr.Button("Try a safe memory write", elem_classes=["example-button"])
+        block_example = gr.Button("Try the safety boundary", elem_classes=["example-button"])
 
     recall_example.click(
         lambda: "What did we decide about the enterprise pilot prerequisites?",
@@ -208,19 +218,37 @@ with gr.Blocks(
         show_progress="hidden",
     )
 
-    with gr.Row():
-        run_button = gr.Button("Run governed memory request", variant="primary")
-        reset_button = gr.Button("Reset this session")
+    with gr.Row(elem_classes=["primary-actions"]):
+        run_button = gr.Button(
+            "Run governed memory request",
+            variant="primary",
+            elem_id="run-memory-request",
+            elem_classes=["primary-action"],
+        )
+        reset_button = gr.Button(
+            "Reset this session",
+            elem_id="reset-memory-session",
+            elem_classes=["secondary-action"],
+        )
 
     activity_output = gr.HTML(render_activity([], complete=False))
 
-    gr.Markdown("## Memory-grounded answer")
-    answer_output = gr.Textbox(label="Answer", lines=8, interactive=False)
+    gr.Markdown("## Memory-grounded answer", elem_classes=["section-title"])
+    answer_output = gr.Markdown(
+        "Run a memory request to see the recalled context and answer.",
+        elem_id="memory-answer",
+        elem_classes=["answer-panel"],
+    )
 
     with gr.Tabs():
         with gr.Tab("Memory Inspection"):
             retrieved_output = gr.Dataframe(label="Retrieved memories", interactive=False)
-            compressed_context_output = gr.Textbox(label="Compressed working context", lines=10, interactive=False)
+            compressed_context_output = gr.Textbox(
+                label="Compressed working context",
+                lines=10,
+                interactive=False,
+                elem_id="compressed-context",
+            )
             write_decision_output = gr.Markdown("Memory write policy has not run yet.")
             session_memory_output = gr.Dataframe(
                 value=format_memory_table(fresh_baseline_memory_data()),
