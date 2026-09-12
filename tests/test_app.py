@@ -42,6 +42,14 @@ def test_primary_interaction_uses_explicit_light_control_styling():
     assert "color: #0f172a" in app.APP_CSS
 
 
+def test_tabs_keep_light_hover_focus_and_selected_states():
+    assert 'button[role="tab"]:hover' in app.TAB_CSS
+    assert 'button[role="tab"][aria-selected="true"]' in app.TAB_CSS
+    assert "background: #eef2ff" in app.TAB_CSS
+    assert "background: #ffffff" in app.TAB_CSS
+    assert "color: #4f46e5" in app.TAB_CSS
+
+
 def test_business_story_explains_enterprise_pilot_continuity_problem():
     assert "enterprise customer pilot" in app.BUSINESS_STORY_HTML
     assert "Support, Operations, and Engineering" in app.BUSINESS_STORY_HTML
