@@ -11,7 +11,13 @@ APP_CSS = """
     --body-background-fill: #f8fafc !important;
     --body-text-color: #0f172a !important;
     --block-background-fill: #ffffff !important;
-    --block-label-text-color: #0f172a !important;
+    --block-label-text-color: #334155 !important;
+    --input-background-fill: #ffffff !important;
+    --input-border-color: #cbd5e1 !important;
+    --input-placeholder-color: #94a3b8 !important;
+    --button-primary-background-fill: #4f46e5 !important;
+    --button-primary-background-fill-hover: #4338ca !important;
+    --button-primary-text-color: #ffffff !important;
 }
 
 .gradio-container {
@@ -20,6 +26,31 @@ APP_CSS = """
     padding: 26px 24px 48px !important;
     background: #f8fafc !important;
     color: #0f172a !important;
+}
+
+/* Make native Gradio controls obey the same light presentation as the custom cards. */
+.gradio-container textarea,
+.gradio-container input[type="text"],
+.gradio-container input[type="number"] {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+}
+.gradio-container textarea::placeholder,
+.gradio-container input::placeholder {
+    color: #94a3b8 !important;
+    -webkit-text-fill-color: #94a3b8 !important;
+    opacity: 1 !important;
+}
+.gradio-container label,
+.gradio-container label span,
+.gradio-container .label-wrap,
+.gradio-container .label-wrap span {
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+    opacity: 1 !important;
 }
 
 .hero-card,
@@ -122,10 +153,126 @@ APP_CSS = """
     opacity: 1 !important;
 }
 
+.memory-boundary {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+    margin:14px 0 24px;
+}
+.boundary-box {
+    border-radius:16px;
+    padding:18px 20px;
+}
+.boundary-box h3 {
+    margin:0 0 7px;
+    font-size:1rem;
+    font-weight:800;
+    color:#0f172a !important;
+    -webkit-text-fill-color:#0f172a !important;
+    opacity:1 !important;
+}
+.boundary-box p {
+    margin:0;
+    line-height:1.55;
+    color:#475569 !important;
+    -webkit-text-fill-color:#475569 !important;
+    opacity:1 !important;
+}
+
+.section-title h2,
+.section-title {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+}
+
+/* Main request control. */
+#memory-query {
+    border: 1px solid #dbe3ee !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    padding: 12px 14px !important;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04) !important;
+}
+#memory-query > div,
+#memory-query .wrap,
+#memory-query .form,
+#memory-query .input-container,
+#memory-query textarea {
+    background: #ffffff !important;
+}
+#memory-query textarea {
+    min-height: 92px !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    padding: 12px 14px !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    box-shadow: inset 0 0 0 1px #e2e8f0 !important;
+}
+
+.control-row {
+    gap: 14px !important;
+    margin-top: 12px !important;
+}
+#memory-top-k,
+#memory-write-permission {
+    background: #ffffff !important;
+    border: 1px solid #dbe3ee !important;
+    border-radius: 14px !important;
+    padding: 14px 16px !important;
+    box-shadow: none !important;
+}
+#memory-top-k input[type="range"] {
+    accent-color: #4f46e5 !important;
+}
+#memory-write-permission input[type="checkbox"] {
+    accent-color: #4f46e5 !important;
+}
+
+.example-actions,
+.primary-actions {
+    gap: 12px !important;
+}
+.example-button,
+.secondary-action,
+.primary-action {
+    border-radius: 12px !important;
+    min-height: 46px !important;
+    font-weight: 750 !important;
+    box-shadow: none !important;
+}
+.example-button,
+.secondary-action {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+}
+.example-button:hover,
+.secondary-action:hover {
+    background: #f8fafc !important;
+    border-color: #94a3b8 !important;
+}
+.primary-action,
+#run-memory-request {
+    background: #4f46e5 !important;
+    border: 1px solid #4f46e5 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+.primary-action:hover,
+#run-memory-request:hover {
+    background: #4338ca !important;
+    border-color: #4338ca !important;
+}
+
 .activity-card {
-    padding: 18px;
-    min-height: 120px;
+    padding: 20px;
+    min-height: 118px;
     border-radius: 18px;
+    margin-top: 8px;
 }
 .activity-header {
     display:flex;
@@ -177,34 +324,48 @@ APP_CSS = """
     opacity: 1 !important;
 }
 
-.memory-boundary {
-    display:grid;
-    grid-template-columns:1fr;
-    gap:10px;
-    margin:14px 0;
+.answer-panel {
+    border: 1px solid #dbe3ee !important;
+    border-radius: 18px !important;
+    background: #ffffff !important;
+    padding: 20px 22px !important;
+    min-height: 112px !important;
+    box-shadow: 0 6px 22px rgba(15, 23, 42, 0.05) !important;
 }
-.boundary-box {
-    border-radius:14px;
-    padding:16px 18px;
+.answer-panel,
+.answer-panel p,
+.answer-panel li,
+.answer-panel strong,
+.answer-panel h1,
+.answer-panel h2,
+.answer-panel h3 {
+    color: #1e293b !important;
+    -webkit-text-fill-color: #1e293b !important;
+    opacity: 1 !important;
 }
-.boundary-box h3 {
-    margin:0 0 7px;
-    font-size:1rem;
-    font-weight:800;
-    color:#0f172a !important;
-    -webkit-text-fill-color:#0f172a !important;
-    opacity:1 !important;
+.answer-panel p {
+    line-height: 1.65 !important;
 }
-.boundary-box p {
-    margin:0;
-    line-height:1.55;
-    color:#475569 !important;
-    -webkit-text-fill-color:#475569 !important;
-    opacity:1 !important;
+
+#compressed-context,
+#compressed-context > div,
+#compressed-context .wrap,
+#compressed-context .form,
+#compressed-context .input-container,
+#compressed-context textarea {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
 }
 
 @media (min-width: 860px) {
   .memory-boundary { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+    .gradio-container { padding: 18px 14px 36px !important; }
+    .hero-card { padding: 22px; }
+    .hero-card h1 { font-size: 1.9rem; }
 }
 
 footer { display:none !important; }
