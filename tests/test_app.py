@@ -42,7 +42,21 @@ def test_primary_interaction_uses_explicit_light_control_styling():
     assert "color: #0f172a" in app.APP_CSS
 
 
-def test_stream_session_exposes_real_memory_activity(monkeypatch):
+def test_business_story_explains_enterprise_pilot_continuity_problem():
+    assert "enterprise customer pilot" in app.BUSINESS_STORY_HTML
+    assert "Support, Operations, and Engineering" in app.BUSINESS_STORY_HTML
+    assert "Business risk" in app.BUSINESS_STORY_HTML
+    assert "Application authority" in app.BUSINESS_STORY_HTML
+
+
+def test_public_evidence_uses_light_html_tables_not_native_dataframe():
+    html = app.format_memory_html(app.fresh_baseline_memory_data())
+    assert "evidence-table" in html
+    assert "Harborlight Support Portal" in html
+    assert "gr.Dataframe" not in open("app.py", encoding="utf-8").read()
+
+
+def test_stream_session_exposes_real_memory_activity_and_business_outcome(monkeypatch):
     monkeypatch.setattr(app, "get_embedding_model", lambda: HashingEmbedder())
     frames = list(
         app.stream_session(
@@ -59,6 +73,8 @@ def test_stream_session_exposes_real_memory_activity(monkeypatch):
     assert "Memory policy evaluated" in "".join(frame[0] for frame in frames)
     assert "COMPLETE" in frames[-1][0]
     assert "SKIP" in frames[-1][4]
+    assert "What Harborlight carried forward" in frames[-1][2]
+    assert "Memory governance" in frames[-1][2]
 
 
 def test_reset_session_restores_synthetic_baseline():
