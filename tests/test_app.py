@@ -34,6 +34,14 @@ def test_business_presentation_is_centered_and_privacy_first():
     assert "SAVE / SKIP / BLOCK" in app.CONCEPT_HTML
 
 
+def test_primary_interaction_uses_explicit_light_control_styling():
+    assert "#memory-query textarea" in app.APP_CSS
+    assert ".answer-panel" in app.APP_CSS
+    assert "#run-memory-request" in app.APP_CSS
+    assert "background: #ffffff" in app.APP_CSS
+    assert "color: #0f172a" in app.APP_CSS
+
+
 def test_stream_session_exposes_real_memory_activity(monkeypatch):
     monkeypatch.setattr(app, "get_embedding_model", lambda: HashingEmbedder())
     frames = list(
