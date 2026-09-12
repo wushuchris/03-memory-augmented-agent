@@ -28,7 +28,6 @@ APP_CSS = """
     color: #0f172a !important;
 }
 
-/* Make native Gradio controls obey the same light presentation as the custom cards. */
 .gradio-container textarea,
 .gradio-container input[type="text"],
 .gradio-container input[type="number"] {
@@ -57,11 +56,14 @@ APP_CSS = """
 .privacy-card,
 .concept-card,
 .activity-card,
-.boundary-box {
+.boundary-box,
+.business-story,
+.business-outcome,
+.evidence-panel {
     border: 1px solid #dbe3ee !important;
     background: #ffffff !important;
     color: #0f172a !important;
-    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.07) !important;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06) !important;
 }
 
 .hero-card {
@@ -76,7 +78,6 @@ APP_CSS = """
     text-transform: uppercase;
     color: #4338ca !important;
     -webkit-text-fill-color: #4338ca !important;
-    opacity: 1 !important;
 }
 .hero-card h1 {
     font-size: 2.35rem;
@@ -84,7 +85,6 @@ APP_CSS = """
     margin: 8px 0 14px;
     color: #0f172a !important;
     -webkit-text-fill-color: #0f172a !important;
-    opacity: 1 !important;
 }
 .hero-card p {
     font-size: 1.06rem;
@@ -92,7 +92,6 @@ APP_CSS = """
     color: #475569 !important;
     -webkit-text-fill-color: #475569 !important;
     margin: 0;
-    opacity: 1 !important;
 }
 .pattern-line {
     margin-top: 18px;
@@ -102,7 +101,6 @@ APP_CSS = """
     color: #312e81 !important;
     -webkit-text-fill-color: #312e81 !important;
     font-weight: 800;
-    opacity: 1 !important;
 }
 
 .privacy-card {
@@ -113,12 +111,60 @@ APP_CSS = """
     color: #334155 !important;
     -webkit-text-fill-color: #334155 !important;
     line-height: 1.55;
-    opacity: 1 !important;
 }
 .privacy-card strong {
     color: #0f172a !important;
     -webkit-text-fill-color: #0f172a !important;
-    opacity: 1 !important;
+}
+
+.business-story {
+    border-radius: 18px;
+    padding: 24px;
+    margin: 4px 0 20px;
+}
+.business-kicker {
+    color: #4f46e5 !important;
+    -webkit-text-fill-color: #4f46e5 !important;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    font-size: .78rem;
+    font-weight: 850;
+    margin-bottom: 7px;
+}
+.business-story h2 {
+    margin: 0 0 10px;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-size: 1.38rem;
+}
+.business-story > p {
+    margin: 0;
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+    line-height: 1.65;
+}
+.business-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 18px;
+}
+.business-mini {
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    background: #f8fafc;
+    padding: 14px 15px;
+}
+.business-mini strong {
+    display: block;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    margin-bottom: 4px;
+}
+.business-mini span {
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+    line-height: 1.5;
 }
 
 .concept-grid {
@@ -131,52 +177,35 @@ APP_CSS = """
     padding: 18px 20px;
     border-radius: 18px;
 }
-.concept-card h3 {
+.concept-card h3,
+.boundary-box h3 {
     margin: 0 0 7px;
     font-size: 1.02rem;
     font-weight: 800;
     color: #0f172a !important;
     -webkit-text-fill-color: #0f172a !important;
-    opacity: 1 !important;
 }
-.concept-card p {
+.concept-card p,
+.boundary-box p {
     margin: 0;
     color: #475569 !important;
     -webkit-text-fill-color: #475569 !important;
     line-height: 1.55;
-    opacity: 1 !important;
 }
 .concept-card strong {
     color: #312e81 !important;
     -webkit-text-fill-color: #312e81 !important;
-    font-weight: 800;
-    opacity: 1 !important;
 }
 
 .memory-boundary {
-    display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
-    margin:14px 0 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 14px 0 24px;
 }
 .boundary-box {
-    border-radius:16px;
-    padding:18px 20px;
-}
-.boundary-box h3 {
-    margin:0 0 7px;
-    font-size:1rem;
-    font-weight:800;
-    color:#0f172a !important;
-    -webkit-text-fill-color:#0f172a !important;
-    opacity:1 !important;
-}
-.boundary-box p {
-    margin:0;
-    line-height:1.55;
-    color:#475569 !important;
-    -webkit-text-fill-color:#475569 !important;
-    opacity:1 !important;
+    border-radius: 16px;
+    padding: 18px 20px;
 }
 
 .section-title h2,
@@ -185,7 +214,6 @@ APP_CSS = """
     -webkit-text-fill-color: #0f172a !important;
 }
 
-/* Main request control. */
 #memory-query {
     border: 1px solid #dbe3ee !important;
     border-radius: 16px !important;
@@ -211,7 +239,6 @@ APP_CSS = """
     -webkit-text-fill-color: #0f172a !important;
     box-shadow: inset 0 0 0 1px #e2e8f0 !important;
 }
-
 .control-row {
     gap: 14px !important;
     margin-top: 12px !important;
@@ -224,9 +251,7 @@ APP_CSS = """
     padding: 14px 16px !important;
     box-shadow: none !important;
 }
-#memory-top-k input[type="range"] {
-    accent-color: #4f46e5 !important;
-}
+#memory-top-k input[type="range"],
 #memory-write-permission input[type="checkbox"] {
     accent-color: #4f46e5 !important;
 }
@@ -275,36 +300,35 @@ APP_CSS = """
     margin-top: 8px;
 }
 .activity-header {
-    display:flex;
-    justify-content:space-between;
-    gap:12px;
-    align-items:center;
-    margin-bottom:12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
 }
 .activity-title {
     font-weight: 800;
     color: #0f172a !important;
     -webkit-text-fill-color: #0f172a !important;
-    opacity: 1 !important;
 }
 .activity-badge {
-    border-radius:999px;
-    padding:4px 10px;
-    font-size:.76rem;
-    font-weight:800;
-    background:#e2e8f0 !important;
-    color:#334155 !important;
-    -webkit-text-fill-color:#334155 !important;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: .76rem;
+    font-weight: 800;
+    background: #e2e8f0 !important;
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
 }
 .activity-badge.running {
-    background:#e0e7ff !important;
-    color:#3730a3 !important;
-    -webkit-text-fill-color:#3730a3 !important;
+    background: #e0e7ff !important;
+    color: #3730a3 !important;
+    -webkit-text-fill-color: #3730a3 !important;
 }
 .activity-badge.complete {
-    background:#dcfce7 !important;
-    color:#166534 !important;
-    -webkit-text-fill-color:#166534 !important;
+    background: #dcfce7 !important;
+    color: #166534 !important;
+    -webkit-text-fill-color: #166534 !important;
 }
 .event-row {
     border-left: 3px solid #cbd5e1;
@@ -313,38 +337,112 @@ APP_CSS = """
 }
 .event-label {
     font-weight: 800;
-    color:#1e293b !important;
-    -webkit-text-fill-color:#1e293b !important;
-    opacity: 1 !important;
+    color: #1e293b !important;
+    -webkit-text-fill-color: #1e293b !important;
 }
 .event-message {
-    color:#475569 !important;
-    -webkit-text-fill-color:#475569 !important;
-    margin-top:2px;
-    opacity: 1 !important;
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+    margin-top: 2px;
 }
 
-.answer-panel {
-    border: 1px solid #dbe3ee !important;
+.answer-panel,
+.business-outcome,
+.evidence-panel {
     border-radius: 18px !important;
-    background: #ffffff !important;
     padding: 20px 22px !important;
-    min-height: 112px !important;
-    box-shadow: 0 6px 22px rgba(15, 23, 42, 0.05) !important;
+    min-height: 96px !important;
 }
 .answer-panel,
 .answer-panel p,
 .answer-panel li,
 .answer-panel strong,
-.answer-panel h1,
-.answer-panel h2,
-.answer-panel h3 {
+.business-outcome,
+.business-outcome p,
+.business-outcome li,
+.business-outcome strong {
     color: #1e293b !important;
     -webkit-text-fill-color: #1e293b !important;
-    opacity: 1 !important;
 }
-.answer-panel p {
-    line-height: 1.65 !important;
+.answer-panel p,
+.business-outcome p,
+.business-outcome li {
+    line-height: 1.62 !important;
+}
+
+.outcome-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.outcome-title {
+    font-weight: 850;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+}
+.outcome-badge {
+    border-radius: 999px;
+    padding: 4px 10px;
+    background: #eef2ff;
+    color: #3730a3 !important;
+    -webkit-text-fill-color: #3730a3 !important;
+    font-size: .76rem;
+    font-weight: 850;
+}
+.outcome-list {
+    margin: 8px 0 0 20px;
+    padding: 0;
+}
+.outcome-policy {
+    margin-top: 14px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 12px;
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+}
+
+.evidence-panel {
+    padding: 0 !important;
+    overflow: hidden;
+}
+.evidence-empty {
+    padding: 18px 20px;
+    color: #64748b !important;
+    -webkit-text-fill-color: #64748b !important;
+}
+.evidence-table-wrap {
+    overflow-x: auto;
+}
+.evidence-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: .9rem;
+}
+.evidence-table th {
+    text-align: left;
+    padding: 11px 12px;
+    background: #f1f5f9;
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+    border-bottom: 1px solid #dbe3ee;
+    font-weight: 800;
+    white-space: nowrap;
+}
+.evidence-table td {
+    vertical-align: top;
+    padding: 11px 12px;
+    background: #ffffff;
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+    border-bottom: 1px solid #edf2f7;
+    line-height: 1.45;
+}
+.evidence-table tr:last-child td {
+    border-bottom: 0;
 }
 
 #compressed-context,
@@ -358,17 +456,19 @@ APP_CSS = """
     -webkit-text-fill-color: #0f172a !important;
 }
 
-@media (min-width: 860px) {
-  .memory-boundary { grid-template-columns: 1fr 1fr; }
+@media (min-width: 760px) {
+    .business-grid { grid-template-columns: repeat(3, 1fr); }
 }
-
+@media (min-width: 860px) {
+    .memory-boundary { grid-template-columns: 1fr 1fr; }
+}
 @media (max-width: 700px) {
     .gradio-container { padding: 18px 14px 36px !important; }
     .hero-card { padding: 22px; }
     .hero-card h1 { font-size: 1.9rem; }
 }
 
-footer { display:none !important; }
+footer { display: none !important; }
 """
 
 
@@ -389,11 +489,30 @@ HERO_HTML = """
 """
 
 
+BUSINESS_STORY_HTML = """
+<div class="business-story">
+  <div class="business-kicker">The business problem</div>
+  <h2>Harborlight is preparing an enterprise customer pilot across several teams.</h2>
+  <p>
+    Support, Operations, and Engineering have already made decisions about launch prerequisites,
+    ownership, timing, and readiness reviews. Those decisions were made across different meetings.
+    The operational risk is losing an important decision during a handoff—or forcing every new
+    conversation to reload the entire project history just to stay consistent.
+  </p>
+  <div class="business-grid">
+    <div class="business-mini"><strong>Business risk</strong><span>Missed prerequisites, repeated decisions, and inconsistent customer handoffs.</span></div>
+    <div class="business-mini"><strong>Agent contribution</strong><span>Recall only the prior project context that matters for the request being handled now.</span></div>
+    <div class="business-mini"><strong>Application authority</strong><span>Decide what becomes memory, what is skipped, and what sensitive content is blocked.</span></div>
+  </div>
+</div>
+"""
+
+
 CONCEPT_HTML = """
 <div class="concept-grid">
   <div class="concept-card"><h3>1 · Recall only what is relevant</h3><p>Semantic similarity ranks prior project memories instead of loading the entire history into every turn.</p></div>
   <div class="concept-card"><h3>2 · Separate stable facts from prior events</h3><p>Semantic memory represents durable context; episodic memory represents decisions and events that happened over time.</p></div>
-  <div class="concept-card"><h3>3 · Make memory writes an application decision</h3><p>The write policy returns <strong>SAVE / SKIP / BLOCK</strong> before any new information becomes durable memory. Questions are usually skipped, durable project decisions may be saved, and sensitive-looking content is blocked before storage.</p></div>
+  <div class="concept-card"><h3>3 · Make memory writes an application decision</h3><p>The write policy returns <strong>SAVE / SKIP / BLOCK</strong> before any new information becomes durable memory.</p></div>
   <div class="concept-card"><h3>4 · Keep the public demo isolated</h3><p>Each session starts from the same synthetic baseline. No visitor can mutate another visitor's tracked memory or committed audit log.</p></div>
 </div>
 <div class="memory-boundary">
