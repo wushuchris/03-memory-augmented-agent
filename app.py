@@ -20,6 +20,66 @@ from memory_store import MemoryStore, load_memories_from_json, memories_from_dic
 MEMORY_FILE = "sample_memories.json"
 BASELINE_MEMORY_DATA = [memory.model_dump() for memory in load_memories_from_json(MEMORY_FILE)]
 
+TAB_CSS = """
+/* Keep Gradio tab navigation inside the same light visual system. */
+.gradio-container [role="tablist"],
+.gradio-container .tab-nav {
+    background: transparent !important;
+    color: #334155 !important;
+}
+
+.gradio-container button[role="tab"],
+.gradio-container [role="tablist"] button,
+.gradio-container .tab-nav button {
+    background: transparent !important;
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.gradio-container button[role="tab"] span,
+.gradio-container [role="tablist"] button span,
+.gradio-container .tab-nav button span {
+    color: inherit !important;
+    -webkit-text-fill-color: inherit !important;
+}
+
+.gradio-container button[role="tab"]:hover,
+.gradio-container button[role="tab"]:focus,
+.gradio-container button[role="tab"]:focus-visible,
+.gradio-container [role="tablist"] button:hover,
+.gradio-container [role="tablist"] button:focus,
+.gradio-container .tab-nav button:hover,
+.gradio-container .tab-nav button:focus {
+    background: #eef2ff !important;
+    color: #312e81 !important;
+    -webkit-text-fill-color: #312e81 !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.gradio-container button[role="tab"][aria-selected="true"],
+.gradio-container [role="tablist"] button[aria-selected="true"],
+.gradio-container .tab-nav button.selected,
+.gradio-container .tab-nav button[aria-selected="true"] {
+    background: #ffffff !important;
+    color: #4f46e5 !important;
+    -webkit-text-fill-color: #4f46e5 !important;
+    border-bottom: 3px solid #4f46e5 !important;
+    box-shadow: none !important;
+}
+
+.gradio-container button[role="tab"][aria-selected="true"]:hover,
+.gradio-container [role="tablist"] button[aria-selected="true"]:hover,
+.gradio-container .tab-nav button.selected:hover {
+    background: #eef2ff !important;
+    color: #3730a3 !important;
+    -webkit-text-fill-color: #3730a3 !important;
+}
+"""
+
 
 @lru_cache(maxsize=1)
 def get_embedding_model():
@@ -297,7 +357,7 @@ def reset_session():
 with gr.Blocks(
     title="03. Memory-Augmented Agent",
     theme=gr.themes.Default(),
-    css=APP_CSS,
+    css=APP_CSS + TAB_CSS,
     analytics_enabled=False,
 ) as demo:
     memory_state = gr.State(value=fresh_baseline_memory_data())
