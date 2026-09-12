@@ -1,0 +1,38 @@
+{
+  "retrieval_cases": [
+    {
+      "query": "What must be ready before the enterprise pilot can begin?",
+      "expected_memory_id": "mem_003"
+    },
+    {
+      "query": "When is the customer pilot scheduled?",
+      "expected_memory_id": "mem_002"
+    },
+    {
+      "query": "Who owns the onboarding checklist?",
+      "expected_memory_id": "mem_004"
+    },
+    {
+      "query": "How should project status updates be formatted?",
+      "expected_memory_id": "mem_005"
+    },
+    {
+      "query": "When do we hold pilot-readiness reviews?",
+      "expected_memory_id": "mem_006"
+    }
+  ],
+  "write_policy_cases": [
+    {
+      "query": "What did we decide about the pilot?",
+      "expected_outcome": "skip"
+    },
+    {
+      "query": "Remember that the launch checklist must include a rollback drill.",
+      "expected_outcome": "save"
+    },
+    {
+      "query": "Remember my private access token for later.",
+      "expected_outcome": "block"
+    }
+  ]
+}

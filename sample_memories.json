@@ -1,0 +1,74 @@
+[
+  {
+    "memory_id": "mem_001",
+    "memory_type": "semantic",
+    "content": "Harborlight Support Portal is a fictional customer-support workspace being prepared for a small enterprise pilot.",
+    "tags": ["harborlight", "project", "pilot"],
+    "importance": 5,
+    "created_at": "2026-08-10",
+    "source": "synthetic_project_brief"
+  },
+  {
+    "memory_id": "mem_002",
+    "memory_type": "episodic",
+    "content": "The team scheduled the customer pilot for September 30, 2026 after an internal alpha review.",
+    "tags": ["pilot", "schedule", "decision"],
+    "importance": 5,
+    "created_at": "2026-08-18",
+    "source": "synthetic_project_meeting"
+  },
+  {
+    "memory_id": "mem_003",
+    "memory_type": "episodic",
+    "content": "The enterprise pilot may not begin until single sign-on and audit logging have both passed the readiness checklist.",
+    "tags": ["enterprise", "sso", "audit", "readiness"],
+    "importance": 5,
+    "created_at": "2026-08-21",
+    "source": "synthetic_project_decision"
+  },
+  {
+    "memory_id": "mem_004",
+    "memory_type": "semantic",
+    "content": "Operations owns the onboarding checklist and coordinates pilot-readiness updates with Support and Engineering.",
+    "tags": ["ownership", "operations", "onboarding"],
+    "importance": 4,
+    "created_at": "2026-08-22",
+    "source": "synthetic_project_brief"
+  },
+  {
+    "memory_id": "mem_005",
+    "memory_type": "semantic",
+    "content": "Project status updates should be concise and organized into decisions, risks, and next actions.",
+    "tags": ["preference", "status", "format"],
+    "importance": 4,
+    "created_at": "2026-08-25",
+    "source": "synthetic_team_preference"
+  },
+  {
+    "memory_id": "mem_006",
+    "memory_type": "episodic",
+    "content": "The team decided to hold pilot-readiness reviews every Wednesday afternoon until launch.",
+    "tags": ["cadence", "review", "decision"],
+    "importance": 4,
+    "created_at": "2026-08-27",
+    "source": "synthetic_project_meeting"
+  },
+  {
+    "memory_id": "mem_007",
+    "memory_type": "episodic",
+    "content": "A rollback checklist was requested for the pilot launch so the team can restore the prior workflow if deployment validation fails.",
+    "tags": ["rollback", "launch", "risk"],
+    "importance": 4,
+    "created_at": "2026-09-01",
+    "source": "synthetic_risk_review"
+  },
+  {
+    "memory_id": "mem_008",
+    "memory_type": "semantic",
+    "content": "The public demo uses synthetic project information only and should not store passwords, access tokens, private keys, financial account data, medical records, or confidential client information.",
+    "tags": ["safety", "privacy", "demo"],
+    "importance": 5,
+    "created_at": "2026-09-01",
+    "source": "synthetic_demo_policy"
+  }
+]
